@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+.matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Adjusted to fit about 30% of the screen */
+    z-index: -1;
+    background: black;
+    overflow: hidden;
+}
+
+.matrix span {
+    position: absolute;
+    font-size: 1rem;
+    color: lime;
+    font-family: monospace;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.text-glitch {
+    font-size: 7rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: green;
+    text-shadow: 
+        2px 2px 0 red,
+        -2px -2px 0 blue;
+    animation: glitch 1s infinite;
+}
+
+.ascii-art {
+    position: absolute;
+    top: 20%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    white-space: pre;
+}
+
+.gif-container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.links {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-40%);
+    font-size: 1.9rem;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px 0 red, -2px -2px 0 blue;
+    }
+    50% {
+        text-shadow: -2px -2px 0 red, 2px 2px 0 blue;
+    }
+    100% {
+        text-shadow: 2px 2px 0 red, -2px -2px 0 blue;
+    }
+}
+
